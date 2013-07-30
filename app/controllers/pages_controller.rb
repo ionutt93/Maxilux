@@ -19,6 +19,7 @@ class PagesController < ApplicationController
 		@products_link = "active"
 		@contact_link = ""
 		@images = Dir.glob("app/assets/images/products1/*.jpg")
+		@products = Dir.glob("app/assets/images/produse/*")
 	end
 
 	def contact

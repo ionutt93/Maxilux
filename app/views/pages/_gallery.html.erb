@@ -1,0 +1,17 @@
+<% @products.each do |folder| %>
+	<div class="page-header">
+		<a href="#"><h2><%= folder.split('/').last.capitalize %></h2></a>
+	</div>
+	<div class="thumbnails">
+	<% images = Dir.glob("#{folder}/*.jpg") %>
+	<% images.each do |image| %>
+		<% fileaddr = image.split("images/").last %>
+		<div class="span4">
+			<a href="<%= asset_path fileaddr %>" class="thumbnail">
+				<%= image_tag fileaddr %>
+			</a>
+		</div>
+	<% end %>
+	</div>
+<% end %>
+	

@@ -1,36 +1,4 @@
 <%= render("slider")  %>
 <div class="container">
-	<div class="btn-group">
-		<button class="btn dropdown-toggle" data-toggle="dropdown" role="button" href="#">Bucatarii</a>
-		<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-			<li><a href="#">Bucatarie moderna</a></li>
-			<li><a href="#">Bucatarie clasica</a></li>
-			<li><a href="#">Bucatarie retro</a></li>
-			<li><a href="#">Bucatarie stupida</a></li>
-		</ul>
-		<button class="btn dropdown-toggle" data-toggle="dropdown" role="button" href="#">Dormitoare</a>
-		<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-			<li><a href="#">Dormitor modern</a></li>
-			<li><a href="#">Dormitor clasic</a></li>
-			<li><a href="#">Dormitor retro</a></li>
-			<li><a href="#">Dormitor stupid</a></li>
-		</ul>
-		<button class="btn dropdown-toggle" data-toggle="dropdown" role="button" href="#">Bai</a>
-		<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-			<li><a href="#">Baie moderna</a></li>
-			<li><a href="#">Baie clasica</a></li>
-			<li><a href="#">Baie retro</a></li>
-			<li><a href="#">Baie stupida</a></li>
-		</ul>
-	</div>
-	<div class="thumbnails">
-		<% @images.each do |image| %>
-		<div class="span3">
-			<% @addr = "products1/#{image.split('/').last}" %>
-				<a href= "#" class = "thumbnail">
-					<%= image_tag(@addr)%>
-				</a>
-		</div>	
-		<% end %>
-	</div>	
+	<%= render("gallery")  %>
 </div>
