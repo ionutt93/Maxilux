@@ -1,15 +1,16 @@
 <%= render("slider") %>
 <div class="container-fluid">
 	<div class="page-header">
-		<h2>Produsele noastre</h2>
+		<h1>MaxiLux SRL</h1>
 	</div>
 	<div class="row-fluid ">
 		<div class="span4">
 			<div class="thumbnail">
 				<%= image_tag("img1.jpg", alt: "Product pic") %>
 				<div class="caption">
-					<h3>Product Name</h3>
+					<h3>Servicii</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quam unde magni voluptatum eos harum quo voluptate similique officiis a.</p>
+					<a href="<%= pages_servici_path  %>" class="btn">Mai multe</a>
 				</div>
 			</div>
 		</div>
@@ -17,8 +18,9 @@
 			<div class="thumbnail">
 				<%= image_tag("img2.jpg", alt: "Product pic") %>
 				<div class="caption">
-					<h3>Product Name</h3>
+					<h3>Produse</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quam unde magni voluptatum eos harum quo voluptate similique officiis a.</p>
+					<a href="<%= pages_products_path  %>" class="btn">Mai multe</a>
 				</div>
 			</div>
 		</div>
@@ -26,8 +28,9 @@
 			<div class="thumbnail">
 				<%= image_tag("img3.jpg", alt: "Product pic") %>
 				<div class="caption">
-					<h3>Product Name</h3>
+					<h3>Lucrari</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quam unde magni voluptatum eos harum quo voluptate similique officiis a.</p>
+					<a href="<%= pages_products_path  %>" class="btn">Mai multe</a>
 				</div>
 			</div>
 		</div>

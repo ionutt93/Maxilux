@@ -6,8 +6,14 @@
 	<% images = Dir.glob("#{folder}/*.jpg") %>
 	<% images.each do |image| %>
 		<% fileaddr = image.split("images/").last %>
+		<div id="<%= asset_path fileaddr %>" class="modal hide fade">
+			<div class="modal-header">Poze</div>
+			<div class="modal-body">
+				<%= image_tag fileaddr %>
+			</div>
+		</div>
 		<div class="span4">
-			<a href="<%= asset_path fileaddr %>" class="thumbnail">
+			<a href="#<%= asset_path fileaddr %>" class="thumbnail" data-toggle="modal">
 				<%= image_tag fileaddr %>
 			</a>
 		</div>

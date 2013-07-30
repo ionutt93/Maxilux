@@ -4,6 +4,7 @@ Website::Application.routes.draw do
   get "pages/about_us"
   get "pages/products"
   get "pages/contact"
+  get "pages/servici"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

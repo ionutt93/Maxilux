@@ -4,6 +4,7 @@ class PagesController < ApplicationController
 		@about_us_link = ""
 		@products_link = ""
 		@contact_link = ""
+		@servici_link = ""
 	end
 
 	def about_us
@@ -11,6 +12,7 @@ class PagesController < ApplicationController
 		@about_us_link = "active"
 		@products_link = ""
 		@contact_link = ""
+		@servici_link = ""
 	end
 
 	def products
@@ -18,6 +20,7 @@ class PagesController < ApplicationController
 		@about_us_link = ""
 		@products_link = "active"
 		@contact_link = ""
+		@servici_link = ""
 		@images = Dir.glob("app/assets/images/products1/*.jpg")
 		@products = Dir.glob("app/assets/images/produse/*")
 	end
@@ -27,6 +30,15 @@ class PagesController < ApplicationController
 		@about_us_link = ""
 		@products_link = ""
 		@contact_link = "active"
+		@servici_link = ""
+	end
+
+	def servici
+		@home_link = ""
+		@about_us_link = ""
+		@products_link = ""
+		@contact_link = ""
+		@servici_link = "active"
 	end
 
 end
