@@ -1,1 +1,11 @@
 @import "bootstrap";
+
+footer {
+	background-color : lightgrey;
+	position: relative;
+	margin-top: 50px; /* negative value of footer height */
+	height: 150px;
+	clear:both;
+	padding-top:20px;
+}
+
