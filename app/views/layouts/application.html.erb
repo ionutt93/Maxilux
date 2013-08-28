@@ -7,8 +7,10 @@
 	<%= csrf_meta_tags %>
 </head>
 <body>
-	<%= render "header" %>
+
+	<%= render "shared/header" %>
 	<%= yield %>
+	
 	<footer>
 		<div class="container">
 			<div class="row">
@@ -21,7 +23,7 @@
 					</ul>
 				</div>
 				<div class="span4">
-					<h3>Retele socializare</h3>
+					<h3>Retele sociale</h3>
 					<ul class="quick-links">
 						<li><a href="#">Facebook</a></li>
 						<li><a href="#">Google+</a></li>

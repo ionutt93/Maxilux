@@ -1,0 +1,22 @@
+<header>
+	<div class="navbar ">
+		<div class="navbar-inner">
+			<div class="container">
+				<%= link_to("Maxilux SRL", pages_home_path, class: "brand")  %>
+				<ul class="nav pull-right">
+					<li class="divider-vertical"></li>
+					<li class="<%= @home_link %>"><%= link_to('Acasa', pages_home_path)  %></li>
+					<li class="divider-vertical"></li>
+					<li class=<%= @servici_link %>> <%= link_to('Servicii', pages_servici_path)  %></li>
+					<li class="divider-vertical"></li>
+					<li class=<%= @products_link %>> <%= link_to('Catalog Lucrari', pages_products_path)  %></li>
+					<li class="divider-vertical"></li>
+					<li class=<%= @about_us_link %>> <%= link_to('Despre noi', pages_about_us_path) %></li>
+					<li class="divider-vertical"></li>
+					<li class=<%= @contact_link %>><%= link_to('Date de Contact', pages_contact_path)  %></li>
+					<li class="divider-vertical"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
