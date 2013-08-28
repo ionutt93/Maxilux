@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 gem 'rails', '4.0.0'
-
+gem 'bootstrap-sass'
 
 group :development, :test do
   gem 'sqlite3', '1.3.7'
@@ -41,5 +41,4 @@ end
 
 group :production do
   gem 'pg', '0.15.1'
-  gem 'bootstrap-sass'
 end
