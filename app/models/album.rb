@@ -1,4 +1,4 @@
-class Album < ActiveRecord::Base
+class Album < ActiveRecord::Base	
 	has_many :photos
 	accepts_nested_attributes_for :photos, :allow_destroy => true
 	validates :name, :uniqueness => true
@@ -15,7 +15,7 @@ class Album < ActiveRecord::Base
 			images.each do |image|
 				puts "image name #{image.split('/').last}"
 				photo = Photo.create(:name => "#{image.split('/').last}",
-													:url => "/assets/#{image.split('images/').last}",
+													:url => ("/assets/#{image.split('images/').last}"),
 													:album => new_album)
 			end
 			
