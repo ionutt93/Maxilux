@@ -1,0 +1,17 @@
+<%= form_for @article do |f| %>
+<p>
+	<%= f.label :title, "Titlu:" %>
+	<%= f.text_field :title %>
+</p>
+<p>
+	<%= f.label :author, "Autor:" %>
+	<%= f.text_field :author %>
+</p>
+<p>
+	<%= f.label :content, "Continut" %>
+	<%= f.text_area :content %>
+</p>
+<p>
+	<%= f.submit "Creaza/Editeaza", :class => "btn btn-primary" %>
+</p>
+<% end %>

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container admin">
 	<div class="row">
 		<div class="span4">
 			<h2>Toate albumele</h2>
@@ -9,7 +9,7 @@
 	</div>
 
 	
-	<table class="table table-hover table-bordered">
+	<table class="table table-hover">
 			<thead>
 				<tr>
 					<th>Nume</th>
@@ -22,7 +22,7 @@
 					<td><%= album.name %></td>
 					<td><%= album.photos.count %></td>
 					<td><%= link_to "Vezi toate pozele", album_path(album) %></td>
-					<td><%= link_to "Sterge", "#" %></td>
+					<td><%= link_to "Sterge", album_path(album), method: :delete, data: { confirm: "Esti sigur?"} %></td>
 				</tr>
 				<% end %>
 			</tbody>

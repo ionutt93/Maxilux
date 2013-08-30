@@ -1,0 +1,30 @@
+<div class="container admin">
+	<div class="page-header">
+		<h1>Toate articolele</h1>
+	</div>
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Titlu</th>
+				<th>Autor</th>
+				<th>Data postarii</th>
+				<th>Data modificarii</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @articles.each do |article| %>
+				<tr>
+					<td><%= article.title %></td>
+					<td><%= article.author %></td>
+					<td><%= article.created_at %></td>
+					<td><%= article.updated_at %></td>
+					<td><%= link_to "Citeste", article_path(article) %></td>
+					<td><%= link_to "Sterge", article_path(article), :method => :delete, data: { confirm: "Esti sigur?"} %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+	<div class="pull-right">
+		<%= link_to "Articol nou", new_article_path, class: 'btn btn-primary' %>
+	</div>
+</div>

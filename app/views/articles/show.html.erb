@@ -1,0 +1,12 @@
+<div class="container admin">
+	<div class="page-header">
+		<h1><%= @article.title %></h1>
+		<h3><%= @article.author %></h3>
+	</div>
+	<article>
+		<%= raw @article.content %>
+	</article>
+	<%= link_to "Editeaza", edit_article_path(@article), class: 'btn btn-primary' %>
+	<%= link_to "Sterge", article_path(@article), :method => :delete, data: { confirm: "Esti sigur?"}, class: 'btn btn-primary' %>
+	<%= link_to "Inapoi", articles_path, class: 'btn btn-primary pull-right' %>
+</div>
