@@ -15,7 +15,9 @@
 				<% photos.each do |photo| %>
 				<tr>
 					<td>
-						<div class="span2"><%= image_tag photo.url %></div>
+						<div class="span2">
+							<a href="<%= photo.url %>" class="thumbnail"><%= image_tag photo.url %></a> 
+						</div>
 					</td>
 					<td><%= photo.name %></td>
 					<td><%= photo.url %></td>

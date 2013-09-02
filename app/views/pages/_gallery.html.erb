@@ -1,23 +1,22 @@
-<% @products.each do |folder| %>
+<% @albums.each do |album| %>
 	<div class="page-header">
-		<a href="#"><h2><%= folder.split('/').last.capitalize %></h2></a>
-	</div>
-	<div class="thumbnails">
-	<% images = Dir.glob("#{folder}/*.jpg") %>
-	<% images.each do |image| %>
-		<% fileaddr = image.split("images/").last %>
-		<div id="<%= asset_path fileaddr %>" class="modal hide fade">
-			<div class="modal-header">Poze</div>
-			<div class="modal-body">
-				<%= image_tag fileaddr %>
+		<div class="row">
+			<div class="span3">
+				<h2><%= album.name.capitalize %></h2>
+			</div>
+			<div class="span2 offset7">
+				<%= link_to "Mai multe", page_path(album), class: "btn btn-large" %>
 			</div>
 		</div>
-		<div class="span4">
-			<a href="<%= asset_path fileaddr %>" class="thumbnail" data-toggle="modal">
-				<%= image_tag fileaddr %>
-			</a>
-		</div>
-	<% end %>
+	</div>
+	<div class="row thumbnails">
+		<% album.photos[0..2].each do |photo| %>
+			<div class="span4">
+				<a href= "<%= image_path photo.url %>" class="thumbnail" >
+					<%= image_tag photo.url, alt: photo.name %>
+				</a>
+			</div>
+		<% end %>
 	</div>
 <% end %>
-	
+<%= will_paginate @albums, renderer: BootstrapPagination::Rails, previous_label: "Inainte", next_label: "Urmatoarele" %>

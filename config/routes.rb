@@ -5,6 +5,9 @@ Website::Application.routes.draw do
   get "pages/products"
   get "pages/contact"
   get "pages/servici"
+  get "pages/articole"
+  get "pages/articole/:id" => 'pages#show_article', as: "read_article"
+  get "pages/album/:id" => 'pages#show', as: "page"
 
   get "albums/sync"
   resources :albums do

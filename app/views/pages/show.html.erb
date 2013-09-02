@@ -1,0 +1,22 @@
+<div class="container">
+	<div class="page-header">
+		<div class="row">
+			<div class="span3">
+				<h2><%= @album.name.capitalize %></h2>
+			</div>
+			<div class="span2 offset7">
+				<%= link_to "Inapoi", pages_products_path, class: 'btn btn-large' %>
+			</div>
+		</div>
+	</div>
+	<div class="thumbnails">
+		<% @photos.each do |photo| %>
+			<div class="span3">
+				<a href="<%= image_path photo.url %>" class="thumbnail">
+					<%= image_tag photo.url, alt: photo.name %>
+				</a>
+			</div>
+		<% end %>
+	</div>
+	<%= will_paginate @photos, renderer: BootstrapPagination::Rails, previous_label: "Inainte", next_label: "Urmatoarele" %>
+</div>

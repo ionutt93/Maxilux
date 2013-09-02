@@ -1,0 +1,16 @@
+<div class="container admin">
+	<% @articles.each do |article| %>
+		<article>
+			<div class="page-header">
+				<h2><%= article.title.capitalize %></h2>
+				<h4>Autor: <%= article.author %></h4>
+			</div>
+			<div class="content">
+				<%= raw article.summary(100) %>
+			</div>
+			<br>
+			<%= link_to "Citeste", read_article_path(article), class: "btn btn-primary pull-right" %>
+		</article>
+	<% end %>
+	<%= will_paginate @articles, renderer: BootstrapPagination::Rails, previous_label: "Inainte", next_label: "Urmatoarele" %>
+</div>

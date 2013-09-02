@@ -1,0 +1,13 @@
+<div class="container admin">
+	<article>
+		<div class="page-header">
+			<h2><%= @article.title.capitalize %></h2>
+			<h4>Autor: <%= @article.author %></h4>
+		</div>
+		<div class="content">
+			<%= raw @article.content %>
+		</div>
+		<br>
+		<%= link_to "Inapoi", pages_articole_path, class: 'btn btn-primary pull-right' %>
+	</article>
+</div>

@@ -1,0 +1,9 @@
+<div class="container admin">
+	<div class="page-header">
+		<h1>Nume: <%= @photo.name %></h1>
+		<h3>URL: <%= @photo.url %></h3>
+	</div>
+	<div class="thumbnail">
+		<%= image_tag @photo.url, alt: "#{@photo.name}" %>
+	</div>
+</div>
