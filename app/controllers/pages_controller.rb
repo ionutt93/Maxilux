@@ -69,7 +69,7 @@ class PagesController < ApplicationController
 
 		@album = Album.find(params[:id])
 		@photos = @album.photos.paginate(page: params[:page],
-														 				 per_page: 2,
+														 				 per_page: 40,
 														 				 order: 'created_at DESC')
 	end
 
