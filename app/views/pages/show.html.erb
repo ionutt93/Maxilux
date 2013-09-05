@@ -9,37 +9,15 @@
 			</div>
 		</div>
 	</div>
-	<div id="myCarousel" class="carousel slide">
-		<ol class="carousel-indicators">
-		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-		<% if @photos.count > 1 %>
-			<% (@photos.count - 1).times do |i| %>
-				<li data-target="#myCarousel" data-slide-to="<%= i %>"</li>
-			<% end %>
-		<% end %>
-	</ol>
-	<!-- Carousel items -->
-	<div class="carousel-inner">
-		<div class="active item">
-			<%= image_tag @photos.first.url, alt: "#{@photos.first.name}" %>			
-		</div>
-		<% if @photos.count > 1 %>
-			<% @photos[1..(@photos.count-1)].each do |photo| %>
-				<div class="item">
-					<%= image_tag photo.url, alt: "#{photo.name}" %>	
-				</div>
-			<% end %>
-		<% end %>
-	</div>
-	<!-- Carousel nav -->
-	<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-	<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+	<%= render 'small_slider' %>
 </div>
 <div class="page-header"></div>
 	<div class="thumbnails photos">
 		<% @photos.count.times do |i| %>
 			<div class="span3">
-				<%= image_tag @photos[i].url, alt: @photos[i].name, class: "thumbnail", data: { nr: "#{i}"} %>
+				<!-- <a href="#myCarousel"> -->
+					<%= image_tag @photos[i].url, alt: @photos[i].name, class: "thumbnail", data: { nr: "#{i}"} %>
+				<!-- </a> -->
 			</div>
 		<% end %>
 	</div>
