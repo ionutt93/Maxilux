@@ -1,4 +1,4 @@
-$(document).ready(function() { 
+$(document).ready(function() {
 	$('.photos').find('.thumbnail').on('click', function() {
 		var nr = $(this).data('nr');
 		var slider = $(this).closest(".container").find('#myCarousel');
