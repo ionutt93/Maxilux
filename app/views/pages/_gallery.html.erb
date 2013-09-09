@@ -1,13 +1,6 @@
 <% @albums.each do |album| %>
 	<div class="page-header">
-		<div class="row">
-			<div class="span3">
-				<h2><%= album.name.capitalize %></h2>
-			</div>
-			<div class="span2 offset7">
-				<%= link_to "Mai multe", page_path(album), class: "btn btn-large" %>
-			</div>
-		</div>
+		<h2><%= album.name.capitalize %></h2>
 	</div>
 	<div class="row thumbnails">
 		<% album.photos[0..2].each do |photo| %>
@@ -18,5 +11,7 @@
 			</div>
 		<% end %>
 	</div>
+	<br>
+	<%= link_to "Mai multe", page_path(album), class: "btn btn-primary pull-right" %>
 <% end %>
 <%= will_paginate @albums, renderer: BootstrapPagination::Rails, previous_label: "Inainte", next_label: "Urmatoarele" %>
