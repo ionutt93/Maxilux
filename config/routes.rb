@@ -1,4 +1,5 @@
 Website::Application.routes.draw do
+  get "users/new"
   root to: "pages#home"
   get "pages/home"
   get "pages/about_us"
@@ -16,6 +17,7 @@ Website::Application.routes.draw do
 
   resources :articles
   resources :sessions
+  resources :users
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
